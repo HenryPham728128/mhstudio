@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Henry Gaming Bio</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Font chữ -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Intro lúc mở trang -->
+    <div class="intro" id="intro">
+
+        <div class="intro-glow"></div>
+
+        <div class="intro-content">
+
+            <div class="intro-logo">
+                MH
+            </div>
+
+            <h1> BIO</h1>
+
+            <p>Initializing STUDIO Profile...</p>
+
+            <div class="loader">
+                <div class="loader-bar"></div>
+            </div>
+
+            <span class="loading-percent" id="loadingPercent">
+                0%
+            </span>
+
+            <button class="enter-button" id="enterButton">
+                <i class="fa-solid fa-power-off"></i>
+                Enter Bio
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Particles -->
+    <div id="particles"></div>
+
+    <!-- Ánh sáng theo chuột -->
+    <div class="cursor-glow"></div>
+
+    <main class="page-wrapper">
+
+        <div class="version-title">
+            <strong>VERSION 1</strong>
+            <span>BIO GAMING RED</span>
+        </div>
+
+        <article class="bio-card" id="bioCard">
+
+            <!-- Góc trang trí -->
+            <span class="corner corner-top-left"></span>
+            <span class="corner corner-top-right"></span>
+            <span class="corner corner-bottom-left"></span>
+            <span class="corner corner-bottom-right"></span>
+
+            <!-- Banner -->
+            <section class="banner">
+
+                <img
+                    src="assets/banner.jpg"
+                    alt="Henry banner"
+                >
+
+                <div class="banner-overlay"></div>
+
+                <div class="banner-scanline"></div>
+
+            </section>
+
+            <!-- Profile -->
+            <section class="profile">
+
+                <div class="avatar-wrapper">
+
+                    <div class="avatar-ring"></div>
+
+                    <img
+                        class="avatar"
+                        src="assets/avatar.jpg"
+                        alt="Henry avatar"
+                    >
+
+                    <span class="online-dot"></span>
+
+                </div>
+
+                <h1 class="profile-name">
+                    MH STUDIO
+
+                    <span class="verified">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </h1>
+
+                <p class="profile-role">
+                    Multimedia Creator
+                </p>
+
+                <p class="profile-description">
+                    Turning ideas into visual stories.
+                </p>
+
+                <!-- Social -->
+                <div class="social-list">
+
+                    <a
+                        href="https://www.youtube.com/@MHSTUDIO-3636"
+                        class="social-button"
+                        aria-label="YouTube"
+                    >
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/share/g/19PdwMdNAC/"
+                        class="social-button"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        class="social-button"
+                        aria-label="Discord"
+                    >
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        class="social-button"
+                        aria-label="TikTok"
+                    >
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        class="social-button"
+                        aria-label="GitHub"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- Music -->
+            <section class="glass-card music-player">
+
+                <div class="music-main">
+
+                    <div class="album-wrapper">
+
+                        <div class="album-glow"></div>
+
+                        <img
+                            class="album-image"
+                            id="albumImage"
+                            src="assets/music-cover.jpg"
+                            alt="Album cover"
+                        >
+
+                    </div>
+
+                    <div class="music-information">
+
+                        <div class="music-header">
+
+                            <div>
+                                <h2>最初的记忆 (热播DJ小瑞版)</h2>
+
+                                <p>
+                                    <span id="currentTime">0:00</span>
+                                    /
+                                    <span id="duration">0:00</span>
+                                </p>
+                            </div>
+
+                            <div class="equalizer" id="equalizer">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="progress-container" id="progressContainer">
+
+                            <div class="progress-track">
+
+                                <div
+                                    class="progress-fill"
+                                    id="progressFill"
+                                ></div>
+
+                                <div
+                                    class="progress-dot"
+                                    id="progressDot"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="music-controls">
+
+                            <button
+                                class="control-button"
+                                id="restartButton"
+                                aria-label="Phát lại từ đầu"
+                            >
+                                <i class="fa-solid fa-backward-step"></i>
+                            </button>
+
+                            <button
+                                class="play-button"
+                                id="playButton"
+                                aria-label="Phát hoặc dừng nhạc"
+                            >
+                                <i class="fa-solid fa-pause"></i>
+                            </button>
+
+                            <button
+                                class="control-button"
+                                id="forwardButton"
+                                aria-label="Tua tới"
+                            >
+                                <i class="fa-solid fa-forward-step"></i>
+                            </button>
+
+                            <button
+                                class="control-button"
+                                id="muteButton"
+                                aria-label="Tắt âm thanh"
+                            >
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <audio
+                    id="audio"
+                    src="assets/music.mp3"
+                    preload="auto"
+                    loop
+                ></audio>
+
+            </section>
+
+            <!-- Discord -->
+            <section class="glass-card discord-card">
+
+                <div class="card-label">
+                    <i class="fa-brands fa-discord"></i>
+                    DISCORD
+                </div>
+
+                <div class="discord-profile">
+
+                    <div class="discord-avatar-wrapper">
+
+                        <img
+                            src="assets/avatar.jpg"
+                            alt="Discord avatar"
+                            class="discord-avatar"
+                        >
+
+                        <span class="discord-status"></span>
+
+                    </div>
+
+                    <div class="discord-info">
+
+                        <strong>Henry#0001</strong>
+
+                        <span>
+                            <i class="fa-solid fa-circle"></i>
+                            ONLINE
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a href="#" class="discord-button">
+
+                    <span>Join My Server</span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+            </section>
+
+            <!-- Quote -->
+            <section class="glass-card quote-card">
+
+                <i class="fa-solid fa-quote-left quote-icon left"></i>
+
+                <p>
+                    Stay focused and<br>
+                    make it happen.
+                </p>
+
+                <i class="fa-solid fa-quote-right quote-icon right"></i>
+
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                © 2026 Henry. All rights reserved.
+            </footer>
+
+        </article>
+
+    </main>
+
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
